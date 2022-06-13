@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.toUpperCase
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -64,6 +65,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     BeaconListView(zoneEventViewModel.zoneInfo)
+                    StaffScreen()
                 }
             }
         }
@@ -162,6 +164,7 @@ fun BeaconCard(beaconInfo: BeaconInfo) {
 @Composable
 fun DefaultPreview() {
     EstimoteProximity103Theme {
+    StaffScreen()
 
     }
 }
